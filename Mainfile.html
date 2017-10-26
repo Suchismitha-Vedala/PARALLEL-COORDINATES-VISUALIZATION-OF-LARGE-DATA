@@ -1,0 +1,67 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title>Visualisation Project: Suchismitha Vedala </title>
+    <link rel="stylesheet" type="text/css" href="/Users/suchivedala/Desktop/Suchismitha_Vedala/design.css" />
+  </head>
+  <body>
+  <br></br>
+  <h1><center><font color = 'green'><u>Parallel Coordinate Visualisation of Applications</u></font></center></h1>
+    <br></br>
+    <p><u><b><font style = 'Calibri' color = 'blue'>Choose action you want to perform with the data</font></b></u></p>
+    <div class="controls">
+      <button title="Zoom in on selected data" id="keep-data" disabled="disabled">Keep</button>
+      <button title="Remove selected data" id="exclude-data" disabled="disabled">Exclude</button>
+      <button title="Export data as CSV" id="export-data">Export</button>
+      <button id="hide-ticks">Hide Ticks</button>
+      <button id="show-ticks" disabled="disabled">Show Ticks</button>
+      <button id="dark-theme">Dark</button>
+      <button id="light-theme" disabled="disabled">Light</button>
+    </div>
+   <br></br>
+    <center>
+     <strong id="rendered-count"></strong>/<strong id="selected-count"></strong>
+      <div class="fillbar"><div id="selected-bar"><div id="rendered-bar">&nbsp;</div></div></div>
+      <strong id="opacity"></strong><b><font color= 'purple'> Opacity</font></b>
+      </center>
+    <div style="clear:both;"></div>
+  </div>
+  <div id="chart">
+    <canvas id="background"></canvas>
+    <canvas id="foreground"></canvas>
+    <canvas id="highlight"></canvas>
+    <svg></svg>
+  </div>
+  <div id="wrap">
+    
+    <div  class="third">
+      <small>
+      </small>
+      <h4><i><font style='Calibri' color = 'maroon'> Categories of Applications</font></i></h4><button id="unselect-all" onmouseover="this.style.cursor='pointer'">Unselect All Categories</button><button id="select-all" disabled="disabled" onmouseover="this.style.cursor='pointer'">Select All Categories</button>
+      <p id="legend">
+      </p>
+    </div>
+    <div class="third">
+      <h4><i><font style='Calibri' color = 'maroon'>Applications samples</font> </i> <input type="text" id="search" placeholder="Search Applications"></input></h4>
+      <p id="applist">
+      </p>
+    </div>
+    <div class="third" id="controls">
+      <div class="little-box">
+        <h4><i><font style='Calibri' color = 'maroon'>Controls</font></i></h4>
+        <button title="Remove selected data" id="remove-filters" onmouseover="this.style.cursor='pointer'" enabled="enabled">Reset Filters</button>
+        <p>
+          <strong>Brush</strong>: Drag vertically along an axis.<br/>
+          <strong>Remove Brush</strong>: Tap the axis background.<br/>
+          <strong>Reorder Axes</strong>: Drag a label horizontally.<br/>
+          <strong>Invert Axis</strong>: Tap an axis label.<br/>
+          <strong>Remove Axis</strong>: Drag axis label to left or right edge.<br/>
+        </p>
+      </div>
+    </div>
+  </div>
+  </body>
+  <script src="/Users/suchivedala/Desktop/Suchismitha_Vedala/d3.v2.js"></script>
+  <script src="/Users/suchivedala/Desktop/Suchismitha_Vedala/underscore.js"></script>
+  <script src="/Users/suchivedala/Desktop/Suchismitha_Vedala/mainscript.js"></script>
+</html>
